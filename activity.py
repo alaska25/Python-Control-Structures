@@ -8,20 +8,21 @@ Stretch Goal:
 - Strings are not allowed for inputs
 - No zero or negative values
 """
-enter_div_num = int(input("Please enter a number:\n"))
-if enter_div_num == 1:
-	print(f"{enter_div_num} is a not a leap year!")
-elif enter_div_num == 2:
-	print(f"{enter_div_num} is a leap year!")
-else:
-	print(f"{enter_div_num} is not a leap year nor a leap year!")
+Year = int(input("Enter the number: "))  
+
+if((Year % 400 == 0) or  
+     (Year % 100 != 0) and  
+     (Year % 4 == 0)):   
+    print("Given Year is a leap Year")   
+else:  
+    print ("Given Year is not a leap Year")  
 
 
 Rows_num = int(input("Enter number of row: ")) 
 Column_num= int(input("Enter number of column: ")) 
 
 
-for x in range(Rows_num):
+for x in range(Row_num):
     for y in range(Column_num):
         print('*',end = ' ')
     print()
